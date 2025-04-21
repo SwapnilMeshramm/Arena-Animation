@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Animation Tilak Road - Short Term Courses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+
+    <style>
+        /* Short Term Courses Hero Section */
+        .short-term-hero {
+            /* background: linear-gradient(135deg, #1a1c2e 0%, #2a2d4a 100%); */
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .short-term-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../img2/pattern.png') repeat;
+            opacity: 0.1;
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+            border-radius: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .hero-subtitle span {
+            color: #ff6b6b;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .hero-subtitle span::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #ff6b6b;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-subtitle:hover span::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding: 0 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-item {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+            border-radius: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: rgba(255, 107, 107, 0.3);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-number::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background: #ff6b6b;
+            opacity: 0.7;
+        }
+
+        .feature-text {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+            position: relative;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-item:hover .feature-text {
+            color: #ff6b6b;
+            transform: translateY(-2px);
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            margin-top: 10px;
+            line-height: 1.4;
+            display: none;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-item:hover .feature-description {
+            display: block;
+            opacity: 1;
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 107, 107, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .feature-item {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .feature-number {
+                font-size: 2rem;
+            }
+
+            .feature-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .hero-features {
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .feature-number {
+                font-size: 1.8rem;
+            }
+
+            .feature-text {
+                font-size: 1rem;
+            }
+        }
+
+        .short-term-courses {
+            padding: 80px 0;
+            background: #0d1126;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .course-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover .course-image img {
+            transform: scale(1.05);
+        }
+
+        .course-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .duration {
+            color: #ff6b6b;
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .description {
+            color: #e6ecf2;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .enquire-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .enquire-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .course-hero {
+                padding: 60px 0;
+            }
+
+            .course-hero h1 {
+                font-size: 36px;
+            }
+
+            .course-hero p {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .course-card {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-hero h1 {
+                font-size: 28px;
+            }
+
+            .course-hero p {
+                font-size: 16px;
+            }
+
+            .course-card h3 {
+                font-size: 18px;
+            }
+        }
+
+        .course-details {
+            padding: 60px 0;
+            background: #0d1126;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .detail-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 107, 0.3);
+        }
+
+        .detail-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .detail-icon i {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .detail-card h3 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .detail-card p {
+            color: #e6ecf2;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .detail-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="parallax">
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="../index.html"><img src="../img2/Logo white.png" alt="Arena Animation Logo"></a>
+                    </div>
+                    <div class="menu">
+                        <ul class="nav-links">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../AboutUs.html">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="active">Courses <i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="prime-animation.html">Prime Animation</a></li>
+                                    <li><a href="vfx-prime.html">Prime VFX</a></li>
+                                    <li><a href="graphic-and-web-development.html">Graphic & Web Design</a></li>
+                                    <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                    <li><a href="Advanced Program in Game Design.html">Advanced Program in Game design</a></li>
+                                    <li><a href="ui-ux.html">UI & UX Design</a></li>
+                                    <li><a href="motion-graphic.html">Motion Graphic Design</a></li>
+                                    <li><a href="short-term-courses.html" class="active">Short-Term Courses</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../admission.html">Admission</a></li>
+                            <li><a href="../gallery.html">Gallery</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="tel:+919657920200" class="call-btn">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Now</span>
+                        </a>
+                        <button class="mobile-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="short-term-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Short Term Courses</h1>
+                <p class="hero-subtitle">
+                    Master <span>industry-standard tools</span> and techniques in a short duration
+                </p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-number">01</div>
+                        <p class="feature-text">Quick Learning</p>
+                        <p class="feature-description">Master skills in weeks, not years</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">02</div>
+                        <p class="feature-text">Industry Tools</p>
+                        <p class="feature-description">Learn with professional software</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">03</div>
+                        <p class="feature-text">Certification</p>
+                        <p class="feature-description">Get recognized by industry leaders</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="short-term-courses">
+        <div class="container">
+            <div class="course-grid">
+                <!-- Photo Editing Course -->
+                <div class="course-card" data-aos="fade-up">
+                    <div class="course-image">
+                        <img src="images/Photo-Editing-using-Adobe-Photoshop.jpg" alt="Photo Editing using Adobe Photoshop">
+                    </div>
+                    <div class="course-content">
+                        <h3>Photo Editing using Adobe Photoshop</h3>
+                        <p class="duration">Duration: 2 Months</p>
+                        <p class="description">Learn professional photo editing techniques using Adobe Photoshop</p>
+                        <a href="../admission.html" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Logo Design Course -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-image">
+                        <img src="images/Create-a-Logo-using-Adobe-Illustrator.jpg" alt="Create a Logo using Adobe Illustrator">
+                    </div>
+                    <div class="course-content">
+                        <h3>Create a Logo using Adobe Illustrator</h3>
+                        <p class="duration">Duration: 1 Month</p>
+                        <p class="description">Master logo design and vector graphics using Adobe Illustrator</p>
+                        <a href="../admission.html" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Video Editing Course -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-image">
+                        <img src="images/Video-Editing-using-Adobe-Premiere-Pro.jpg" alt="Video Editing using Adobe Premiere Pro">
+                    </div>
+                    <div class="course-content">
+                        <h3>Video Editing using Adobe Premiere Pro</h3>
+                        <p class="duration">Duration: 1 Month</p>
+                        <p class="description">Learn professional video editing with Adobe Premiere Pro</p>
+                        <a href="../admission.html" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- 3D Modeling Course -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="course-image">
+                        <img src="images/3D-Modeling-using-Blender.jpg" alt="3D Modeling using Blender">
+                    </div>
+                    <div class="course-content">
+                        <h3>3D Modeling using Blender</h3>
+                        <p class="duration">Duration: 3 Months</p>
+                        <p class="description">Create stunning 3D models using Blender</p>
+                        <a href="../admission.html" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- 3D Animation Course -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="course-image">
+                        <img src="images/3D-Animation-using-Maya.jpg" alt="3D Animation using Maya">
+                    </div>
+                    <div class="course-content">
+                        <h3>3D Animation using Maya</h3>
+                        <p class="duration">Duration: 6 Months</p>
+                        <p class="description">Master 3D animation with Autodesk Maya</p>
+                        <a href="../admission.html" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Roto for VFX Course -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="course-image">
+                        <img src="images/Roto-for-VFX-using-Silhouette.jpg" alt="Roto for VFX using Silhouette">
+                    </div>
+                    <div class="course-content">
+                        <h3>Roto for VFX using Silhouette</h3>
+                        <p class="duration">Duration: 1 Month</p>
+                        <p class="description">Learn professional rotoscoping techniques</p>
+                        <a href="../admission.html" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Product Advertisement Course -->
+                <div class="course-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="course-image">
+                        <img src="images/Product-Advertisement-using-After-Effects.jpg" alt="Product Advertisement using After Effects">
+                    </div>
+                    <div class="course-content">
+                        <h3>Product Advertisement using After Effects</h3>
+                        <p class="duration">Duration: 2 Months</p>
+                        <p class="description">Create stunning product advertisements with After Effects</p>
+                        <a href="../admission.html" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="detail-card" data-aos="fade-up">
+                    <div class="detail-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <h3>Duration</h3>
+                    <p>3-6 months</p>
+                </div>
+
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <h3>Timings</h3>
+                    <p>2 hrs/day, 3 days/week</p>
+                </div>
+
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Eligibility</h3>
+                    <p>10+2 (any stream) & Graduates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="../img2/Logo white.png" alt="Arena Animation Logo">
+                    <p>Arena Animation, a pioneer in the global media and entertainment training industry offers
+                        power-packed courses that help you shape your creative career.</p>
+                </div>
+                <div class="footer-contact-info">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:arenaanimationtilakroadpune@gmail.com">arenaanimationtilakroadpune@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="phone-numbers">
+                            <a href="tel:+919637920200">91-8855056977</a> / 
+                            <a href="tel:+919657920200">91-8855035977</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Arena Animation Tilak Road, 501, Pinnacle Pride, Above Maharashtra electronics, Opp Cosmos Bank, Tilak Road, Pune - 411030</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../AboutUs.html">AboutUs</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="../admission.html">Admission</a></li>
+                        <li><a href="../gallery.html">Gallery</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/punearenaanimation/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/arenaanimationtilakroad/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=919657920200&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/school/arena-animation-tilak-road-pune/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/user/TilakroadArena" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h3>Subscribe to Newsletter</h3>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address">
+                            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© - 2024 All Copyrights Reserved to Arena Animation Tilak Road Pune . All rights reserved.</p>
+                </div>
+                <div class="footer-links-bottom">
+                    <a href="https://www.arenatilakroad.com/privacy-policy/">Privacy Policy</a>
+                    <a href="https://www.arenatilakroad.com/terms-and-conditions/">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="../custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroContent = document.querySelector('.hero-content');
+            const featureItems = document.querySelectorAll('.feature-item');
+
+            // Initial state
+            heroContent.style.opacity = '0';
+            heroContent.style.transform = 'translateY(20px)';
+            featureItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+            });
+
+            // Animate on load
+            setTimeout(() => {
+                heroContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0)';
+
+                // Animate feature items with delay
+                featureItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 200 + (index * 100));
+                });
+            }, 100);
+
+            // Add hover effect for feature items
+            featureItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.background = 'rgba(255, 255, 255, 0.05)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.background = 'rgba(255, 255, 255, 0.03)';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html> 
